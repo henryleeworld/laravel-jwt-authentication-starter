@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://127.0.0.1:8000'
+paths:
+  /api/v1/login:
+    post:
+      summary: ''
+      operationId: postApiV1Login
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: '認證使用者的電子郵件。. :Attribute 必須是有效的 E-mail。.'
+                  example: admin@admin.com
+                  nullable: false
+                password:
+                  type: string
+                  description: 認證使用者的密碼。.
+                  example: super-secret-password
+                  nullable: false
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/register:
+    post:
+      summary: ''
+      operationId: postApiV1Register
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: '註冊使用者的姓名。. :Attribute 不能小於 2 個字元。 :Attribute 不能多於 255 個字元。.'
+                  example: 系統管理員
+                  nullable: false
+                email:
+                  type: string
+                  description: '註冊使用者的電子郵件。. :Attribute 必須是有效的 E-mail。 :Attribute 不能多於 255 個字元。.'
+                  example: admin@admin.com
+                  nullable: false
+                password:
+                  type: string
+                  description: '註冊使用者的密碼。. :Attribute 不能小於 8 個字元。.'
+                  example: super-secret-password
+                  nullable: false
+              required:
+                - name
+                - email
+                - password
+      security: []
+tags:
+  -
+    name: Authentication
+    description: 'A collection of Authentication specific endpoints.'

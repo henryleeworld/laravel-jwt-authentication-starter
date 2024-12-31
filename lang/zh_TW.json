@@ -1,0 +1,8 @@
+{
+    "Administrator": "系統管理員",
+    "The email of the authenticating user.": "認證使用者的電子郵件。",
+    "The email of the registering user.": "註冊使用者的電子郵件。",
+    "The name of the registering user.": "註冊使用者的姓名。",
+    "The password of the authenticating user.": "認證使用者的密碼。",
+    "The password of the registering user.": "註冊使用者的密碼。"
+}
