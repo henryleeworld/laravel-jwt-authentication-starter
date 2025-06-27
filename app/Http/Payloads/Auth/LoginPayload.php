@@ -17,7 +17,11 @@ final readonly class LoginPayload
         );
     }
 
-    /** @return array{email:string,password:string} */
+    /**
+     * Get all of the input and files for the request.
+     *
+     * @return array
+     */
     public function toArray(): array
     {
         return [

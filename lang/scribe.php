@@ -3,7 +3,7 @@
 return [
     "labels" => [
         "search" => "搜尋",
-        "base_url" => "基礎 URL",
+        "base_url" => "基礎網址",
     ],
 
     "auth" => [
@@ -42,7 +42,7 @@ return [
     "endpoint" => [
         "request" => "請求",
         "headers" => "標頭",
-        "url_parameters" => "URL 參數",
+        "url_parameters" => "網址參數",
         "body_parameters" => "內文參數",
         "query_parameters" => "查詢參數",
         "response" => "回應",

@@ -1,8 +1,9 @@
-# Laravel 11 JSON Web Token 起始點
+# Laravel 12 JSON Web Token 起始點
 
 若身分認證成功後，就會為認證令牌簽署、加密，並將其傳遞給用戶端，此時就可以利用 Bearer 作為驗證方案，將認證令牌夾帶在標頭，造訪需要權限的端點，讓服務知道您的身分是合法的。
 
 ## 使用方式
+- 打開 php.ini 檔案，啟用 PHP 擴充模組 sodium，並重啟服務器。
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
 ```sh
 $ git clone
@@ -20,9 +21,9 @@ $ php artisan key:generate
 ```sh
 $ php artisan jwt:secret
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
 ```sh
-$ php artisan migrate --seed
+$ php artisan migrate
 ```
 - 執行 __Artisan__ 指令的 __scribe:generate__ 來執行 API 文件產生。
 ```sh
@@ -36,11 +37,11 @@ $ php artisan scribe:generate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/HNKwqPM.png)
+![](https://i.imgur.com/2zjd2DP.png)
 > 傳送 HTML 表單資料註冊建立使用者，即可取得認證令牌
 
-![](https://i.imgur.com/kBe6GEW.png)
+![](https://i.imgur.com/aCKCVg2.png)
 > 傳送 HTML 表單資料使用建立使用者來做登入，即可取得認證令牌
 
-![](https://i.imgur.com/jbngw5x.png)
+![](https://i.imgur.com/XqwzPeJ.png)
 > 建議找不同領域或程度的開發者來閱讀文件，確認文件的內容適合任何程度的人閱讀
